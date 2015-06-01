@@ -1,4 +1,14 @@
-
-<table class="table table-hover table-bordered">
-
+		 							<!--ng-model sets $scope.query-->
+<p><input type='search' class='form-control' placeholder='Search' data-ng-model='query'/></p>
+<table class='table table-hover table-bordered'>
+	<thead>
+		<tr>
+			<th data-ng-repeat='field in fields' data-ng-click='sort(field)'>
+				{{ field }}
+				<!--below we are using the bootstrap chevron order icon to show descending and ascending. ng-show takes a boolean value, if true, it shows-->
+				<span data-ng-show = 'sort.field === field && !sort.order' class='glyphicon glyphicon-chevron-down'></span>
+				<span data-ng-show = 'sort.field === field && sort.order'class='glyphicon glyphicon-chevron-up'></span>
+			</th>
+		</tr>
+	</thead>
 </table>
