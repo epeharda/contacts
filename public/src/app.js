@@ -5,6 +5,10 @@ angular.module('ContactsApp',['ngRoute', 'ngResource'])
 			controller: 'ListController',
 			templateUrl: 'views/list.html'
 		});
+		.when('/contacts/new',{
+			controller: 'NewController',
+			templateUrl: 'views/new.html'
+		});
 		//this is incase we need to add the #!
 	$locationProvider.html5Mode(true);
 });

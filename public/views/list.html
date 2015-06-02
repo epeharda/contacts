@@ -4,11 +4,18 @@
 	<thead>
 		<tr>
 			<th data-ng-repeat='field in fields' data-ng-click='sort(field)'>
-				{{ field }}
+				{{ field | labelCase}}
 				<!--below we are using the bootstrap chevron order icon to show descending and ascending. ng-show takes a boolean value, if true, it shows-->
 				<span data-ng-show = 'sort.field === field && !sort.order' class='glyphicon glyphicon-chevron-down'></span>
 				<span data-ng-show = 'sort.field === field && sort.order'class='glyphicon glyphicon-chevron-up'></span>
 			</th>
 		</tr>
 	</thead>
+	<tbody>
+		<tr data-ng-click='show(contact.id)' data-ng-repeat='contact in contacts | filter: query | orderBy: sort.field : sort.order'>
+			<td data-ng-repeat='field in fields'>
+				{{ contact[field][0]}}
+			</td>
+		</tr>
+	</tbody>
 </table>

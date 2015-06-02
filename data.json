@@ -2,7 +2,7 @@
 	"id": 1,
 	"userId": 1,
 	"firstName":["Erica", "text"],
-	"lastName":["Peharda", "text"]
+	"lastName":["Peharda", "text"] 
 }, {
 	"id": 2,
 	"userId": 1,
