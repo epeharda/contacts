@@ -1,0 +1,6 @@
+<div class="row form-group" data-ng-form="{{field}}" data-ng-class="{ 'has-error': {{field}}.$dirty && {{field}}.$invalid }">
+	<label class='col-sm-2 control-label'>{{ field | labelCase}} <span data-ng-if='required'>*</span></label>
+	<div class='col-sm-6' data-ng-switch='required'>
+			<input data-ng-switch-when='true' data-ng-model='record[field][0]' type='{{record[field][1]}}' class='form-control' required data-ng-change='update()' data-ng-blur='blurUpdated()'/>
+	</div>
+</div>

@@ -1,0 +1,14 @@
+<h2>New Contact</h2>
+<form name='newContact' novalidate class='form-horizontal'>  <!--adding name = lets us access this form from our controller-->
+					<!--live='true' can be used for real time saving.  in this case the contact doesn't exist yet so it can't automatically be updated-->
+	<form-field record='contact' field='firstName' live='false' required='true'></form-field>
+
+
+
+	<div class='row form-group'>
+		<div class='col-sm-offset-2'>
+			<button class='btn btn-primary' data-ng-click='save()'>Create Contact</button>
+		</div>
+	</div>
+
+</form>
